@@ -1,28 +1,32 @@
 import React from 'react';
-import { CssBaseline, Container, ThemeProvider, createTheme } from '@mui/material';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Container } from '@mui/material';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact'
 
-const theme = createTheme();
+import { CssBaseline, Paper } from '@mui/material';
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
+
+const App: React.FC = () => (
+  <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Router>
+      <Header />
       <CssBaseline />
-      <Router>
-        <Header />
-        <Container>
+      <Paper style={{ flex: '1', padding: '1rem' }}>
+        <Container maxWidth="sm">
           <Routes>
-            <Route path="/" element={<Home />} /> {/* Use 'element' instead of 'component' */}
-            {/* Add more routes and components as needed */}
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Container>
-        <Footer />
-      </Router>
-    </ThemeProvider>
-  );
-}
+      </Paper>
+      <Footer />
+    </Router>
+  </div>
+);
 
 export default App;
