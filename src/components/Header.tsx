@@ -14,11 +14,13 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import { styled } from '@mui/system';
 
+const drawerWidth = 240;
+
 const useStyles = {
     header: {
         display: 'flex',
         alignItems: 'center',
-        fontFamily: 'Josefin Slab, sans-serif', // Set the font for menu items
+        fontFamily: 'Josefin Slab, sans-serif',
     },
     title: {
         fontFamily: 'Josefin Slab, sans-serif',
@@ -30,23 +32,26 @@ const useStyles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        fontFamily: 'Josefin Slab, sans-serif', // Set the font for menu items
+        fontFamily: 'Josefin Slab, sans-serif',
     },
     menuItem: {
         textDecoration: 'none',
-        color: 'inherit',
         padding: '8px 16px',
-        fontFamily: 'Josefin Slab, sans-serif', // Set the font for menu items
+        fontFamily: 'Josefin Slab, sans-serif',
+        color: '#000' // Unclicked menu item color set to black
+    },
+    selectedMenuItem: {
+        textDecoration: 'none',
+        padding: '8px 16px',
+        fontFamily: 'Josefin Slab, sans-serif',
+        color: 'beige', // Clicked menu item color set to beige
     },
 };
-
-const drawerWidth = 240;
 
 const HeaderAppBar = styled(AppBar)(({ theme }) => ({
     background: '#969696',
     boxShadow: 'none',
     height: '80px',
-
 }));
 
 const Header: React.FC = () => {
@@ -54,8 +59,8 @@ const Header: React.FC = () => {
     const [value, setValue] = useState(location.pathname);
     const [drawerOpen, setDrawerOpen] = useState(false);
 
-    const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
-        setValue(newValue);
+    const handleMenuItemClick = (path: string) => {
+        setValue(path);
     };
 
     const handleDrawerToggle = () => {
@@ -73,22 +78,42 @@ const Header: React.FC = () => {
                         <ul style={useStyles.menu}>
                             <li>
                                 <Link to="/" style={useStyles.menuItem}>
-                                    <Button color={value === '/' ? 'secondary' : 'inherit'}>Maison</Button>
+                                    <Button
+                                        style={value === '/' ? useStyles.selectedMenuItem : useStyles.menuItem}
+                                        onClick={() => handleMenuItemClick('/')}
+                                    >
+                                        Maison
+                                    </Button>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/about" style={useStyles.menuItem}>
-                                    <Button color={value === '/about' ? 'secondary' : 'inherit'}>À propos</Button>
+                                    <Button
+                                        style={value === '/about' ? useStyles.selectedMenuItem : useStyles.menuItem}
+                                        onClick={() => handleMenuItemClick('/about')}
+                                    >
+                                        À propos
+                                    </Button>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/shop" style={useStyles.menuItem}>
-                                    <Button color={value === '/shop' ? 'secondary' : 'inherit'}>Magasin</Button>
+                                    <Button
+                                        style={value === '/shop' ? useStyles.selectedMenuItem : useStyles.menuItem}
+                                        onClick={() => handleMenuItemClick('/shop')}
+                                    >
+                                        Magasin
+                                    </Button>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/contact" style={useStyles.menuItem}>
-                                    <Button color={value === '/contact' ? 'secondary' : 'inherit'}>Contact</Button>
+                                    <Button
+                                        style={value === '/contact' ? useStyles.selectedMenuItem : useStyles.menuItem}
+                                        onClick={() => handleMenuItemClick('/contact')}
+                                    >
+                                        Contact
+                                    </Button>
                                 </Link>
                             </li>
                         </ul>

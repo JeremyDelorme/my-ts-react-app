@@ -22,7 +22,7 @@ const Home: React.FC = () => {
     };
 
     const roundedImageStyle: React.CSSProperties = {
-        width: '100%',
+        width: '75%',
         borderRadius: '4px', // Add a slight border-radius for rounded corners
     };
 
