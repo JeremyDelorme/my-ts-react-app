@@ -52,6 +52,7 @@ const HeaderAppBar = styled(AppBar)(({ theme }) => ({
     background: '#969696',
     boxShadow: 'none',
     height: '80px',
+    width: '1200',
 }));
 
 const Header: React.FC = () => {
