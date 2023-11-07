@@ -18,17 +18,17 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     contentContainerAbout: {
-        paddingTop: '100px',
+        paddingTop: '50px',
         width: '50%'
 
     },
     contentContainerProjects: {
-        paddingTop: '300px',
+        paddingTop: '350px',
     },
 
     contentContainerContact: {
-        paddingTop: '1100px',
-        marginBottom: '100px'
+        paddingTop: '500px',
+        paddingBottom: '100px'
     },
 
     contentContainer: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '50px'
+        paddingTop: '170px'
     },
     stackedImage: {
         width: '80%',
@@ -122,21 +122,41 @@ const Home: React.FC = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae dolores ab facilis ullam, perspiciatis animi nemo repellat sunt quis sint saepe deserunt! Rem similique eveniet molestias nemo adipisci. Est?
                         </Typography>
                     </Box>
-                    <Box display="flex" alignItems="center" justifyContent="center" my={4}>
+                    <Box display="flex" alignItems="center" justifyContent="center" >
                         <Box mx={4} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-                            <img src={cartoon_1} alt="Image 1" style={{ maxWidth: '100%', height: '400px' }} />
+                            <img src={cartoon_1} alt="Image 1" style={{ maxWidth: '100%' }} />
                             <Typography variant="h6" style={{ marginTop: '8px', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
                             </Typography>
                         </Box>
                         <Box mx={4} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-                            <img src={cartoon_2} alt="Image 2" style={{ maxWidth: '100%', height: '400px' }} />
+                            <img src={cartoon_2} alt="Image 2" style={{ maxWidth: '100%' }} />
                             <Typography variant="h6" style={{ marginTop: '8px', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
                                 quae dolores ab facilis ullam, perspiciatis animi nemo repellat
                             </Typography>
                         </Box>
                         <Box mx={4} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-                            <img src={cartoon_3} alt="Image 3" style={{ maxWidth: '100%', height: '400px' }} />
+                            <img src={cartoon_3} alt="Image 3" style={{ maxWidth: '100%' }} />
+                            <Typography variant="h6" style={{ marginTop: '8px', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
+                                sunt quis sint saepe deserunt! Rem similique eveniet molestias nemo adipisci. Est?
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Box display="flex" alignItems="center" justifyContent="center" >
+                        <Box mx={4} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                            <img src={cartoon_1} alt="Image 1" style={{ maxWidth: '100%' }} />
+                            <Typography variant="h6" style={{ marginTop: '8px', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                            </Typography>
+                        </Box>
+                        <Box mx={4} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                            <img src={cartoon_2} alt="Image 2" style={{ maxWidth: '100%' }} />
+                            <Typography variant="h6" style={{ marginTop: '8px', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
+                                quae dolores ab facilis ullam, perspiciatis animi nemo repellat
+                            </Typography>
+                        </Box>
+                        <Box mx={4} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                            <img src={cartoon_3} alt="Image 3" style={{ maxWidth: '100%' }} />
                             <Typography variant="h6" style={{ marginTop: '8px', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
                                 sunt quis sint saepe deserunt! Rem similique eveniet molestias nemo adipisci. Est?
                             </Typography>

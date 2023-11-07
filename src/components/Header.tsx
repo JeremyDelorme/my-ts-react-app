@@ -73,7 +73,7 @@ const Header: React.FC = () => {
             <HeaderAppBar position="static">
                 <Toolbar style={useStyles.header}>
                     <Typography variant="h6" sx={useStyles.title}>
-                        Mon Portfolio
+                        Jérémy Delorme
                     </Typography>
                     <Hidden only="xs" implementation="css">
                         <ul style={useStyles.menu}>
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
                                         style={value === '/shop' ? useStyles.selectedMenuItem : useStyles.menuItem}
                                         onClick={() => handleMenuItemClick('/shop')}
                                     >
-                                        Magasin
+                                        Projets
                                     </Button>
                                 </Link>
                             </li>
