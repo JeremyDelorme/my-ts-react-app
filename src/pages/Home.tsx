@@ -18,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     contentContainerAbout: {
-        paddingTop: '400px',
+        paddingTop: '100px',
         width: '50%'
 
     },
     contentContainerProjects: {
-        paddingTop: '600px',
+        paddingTop: '300px',
     },
 
     contentContainerContact: {
@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        paddingTop: '50px'
     },
     stackedImage: {
         width: '80%',
@@ -98,15 +99,12 @@ const Home: React.FC = () => {
                 </Container>
 
                 <Container className={classes.contentContainerAbout}>
-                    <Box>
-
-                    </Box>
                     <Typography variant="h2" gutterBottom style={{ fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
                         À propos de moi
                     </Typography>
 
                     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" my={4}>
-                        <Typography variant="h6" gutterBottom style={{ fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
+                        <Typography variant="h6" gutterBottom style={{ width: '50%', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae dolores ab facilis ullam, perspiciatis animi nemo repellat sunt quis sint saepe deserunt! Rem similique eveniet molestias nemo adipisci. Est? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae dolores ab facilis ullam, perspiciatis animi nemo repellat sunt quis sint saepe deserunt! Rem similique eveniet molestias nemo adipisci. Est? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae dolores ab facilis ullam, perspiciatis animi nemo repellat sunt quis sint saepe deserunt! Rem similique eveniet molestias nemo adipisci. Est?
                         </Typography>
                     </Box>
@@ -120,7 +118,7 @@ const Home: React.FC = () => {
                     </Box>
 
                     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" my={4}>
-                        <Typography variant="h6" gutterBottom style={{ fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
+                        <Typography variant="h6" gutterBottom style={{ width: '50%', fontFamily: 'Josefin Slab Thin, sans-serif', textAlign: 'center' }}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae dolores ab facilis ullam, perspiciatis animi nemo repellat sunt quis sint saepe deserunt! Rem similique eveniet molestias nemo adipisci. Est?
                         </Typography>
                     </Box>

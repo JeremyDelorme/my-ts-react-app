@@ -19,7 +19,7 @@ const appStyle = {
 const paperStyle = {
   flex: '1',
   padding: '1rem',
-  backgroundColor: '#FFFBF', // Background color set to #FFFBF0
+  backgroundColor: '#FFFBF0', // Background color set to #FFFBF0
 };
 
 const App: React.FC = () => (
